@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Roboto, Poppins, sans-serif;
   background-color: #eee;
@@ -29,9 +33,9 @@ a {
 }
 
 .button-down {
-  display: inline-block;
+  display: block;
   font-size: 3em;
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 .button-down:hover {
   color: #32e0c4;
@@ -51,7 +55,7 @@ a {
   font-weight: 600;
 }
 
-.showcase, footer {
+#about .summary, #about, #benefits .column, #showcase, footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,11 +66,12 @@ header a {
   display: inline-block;
   transition: all 0.3s;
   padding: 6px;
+  outline: 1px solid transparent;
 }
 header a:hover {
   color: #222831;
   background-color: #eee;
-  transform: scale(1.1);
+  transform: scale(1.12);
 }
 header a:active {
   background-color: #32e0c4;
@@ -78,7 +83,11 @@ header {
   align-items: center;
   color: #eee;
   background-color: #222831;
-  height: 90px;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid #32e0c4;
 }
 header h1 {
   font-size: 3em;
@@ -99,7 +108,7 @@ header nav li {
 }
 footer {
   height: 100px;
-  border-top: solid 2px #32e0c4;
+  border-top: solid 2px #eee;
   background-color: #393e46;
   color: #eee;
   text-transform: uppercase;
@@ -110,99 +119,102 @@ footer span {
 }
 
 /*********** MAIN CONTENT ************/
-.showcase {
+#showcase {
   background: url("../img/banner-post.jpg") no-repeat center/cover;
   color: #eee;
-  height: 600px;
+  height: 100vh;
 }
-.showcase h1 {
+#showcase h1 {
   font-size: 4em;
   padding: 0.2em;
   margin-bottom: 20px;
 }
-.showcase p {
+#showcase p {
   text-align: center;
   width: 60%;
   padding: 10px;
 }
-.showcase .button-down {
-  margin-top: 1em;
+#showcase .button-down {
+  margin-top: 2em;
 }
 
-.benefits {
+#benefits {
   color: #222831;
+  height: 100vh;
+  padding-top: 250px;
 }
-.benefits h2 {
+#benefits h2 {
   max-width: 300px;
-  margin: 20px auto;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
   border-bottom: solid 1px #222831;
   text-align: center;
   font-size: 2em;
   padding: 20px 5px;
 }
-.benefits .container {
+#benefits .container {
   margin: auto;
   width: 85%;
 }
-.benefits .card {
+#benefits .card {
   display: table-cell;
   text-align: center;
   padding: 3em 2.5em;
+  width: 33%;
 }
-.benefits .card i {
+#benefits .card i {
   font-size: 80px;
   margin-bottom: 0.3em;
 }
+#benefits .column {
+  width: 100%;
+}
+#benefits .column .button-down {
+  margin-top: 2em;
+}
+
+#about {
+  height: 100vh;
+  color: #eee;
+  background-color: #222831;
+}
+#about h2 {
+  font-size: 2em;
+  padding: 20px 5px;
+  border-bottom: solid 1px #eee;
+  margin-bottom: 70px;
+}
+#about h3 {
+  font-size: 1.5em;
+  margin-bottom: 25px;
+}
+#about .summary {
+  width: 100%;
+  background-color: #393e46;
+  padding: 60px 0;
+  margin-bottom: 70px;
+}
+#about .summary p {
+  width: 50%;
+  font-size: 1.2em;
+  text-align: center;
+}
+#about .contact {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+}
+#about .contact .card {
+  text-align: center;
+  line-height: 1.8em;
+  width: 34%;
+}
+#about .contact .card .big {
+  font-size: 30px;
+  margin-bottom: 0.5em;
+}
 
 /* Animate.css fading entrance snippets */
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.animate__fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-}
-
-@-webkit-keyframes fadeInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-.animate__fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-}
 
 /*# sourceMappingURL=style.css.map */
