@@ -1,48 +1,164 @@
 /*********** GLOBAL SETTINGS ************/
-
+@import url("https://fonts.googleapis.com/css?family=Roboto|Poppins:200,600");
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  font-family: Roboto, Poppins, sans-serif;
+  background-color: #eee;
+}
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: Poppins;
+  font-weight: 300;
+}
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
+/*********** CLASSES ************/
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
+.button-down {
+  display: inline-block;
+  font-size: 3em;
+  transition: all 0.3s;
+}
+.button-down:hover {
+  color: #32e0c4;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.button-down:active {
+  transform: scale(0.8);
+}
 
+.fa {
+  color: inherit;
+}
 
+.emphasize {
+  color: #32e0c4;
+  font-weight: 600;
+}
 
+.showcase, footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
+header a {
+  display: inline-block;
+  transition: all 0.3s;
+  padding: 6px;
+}
+header a:hover {
+  color: #222831;
+  background-color: #eee;
+  transform: scale(1.1);
+}
+header a:active {
+  background-color: #32e0c4;
+}
 
+/*********** BLOCK - ELEMENT STYLES ************/
+header {
+  display: flex;
+  align-items: center;
+  color: #eee;
+  background-color: #222831;
+  height: 90px;
+}
+header h1 {
+  font-size: 3em;
+  margin-left: 4rem;
+}
+header nav {
+  margin-left: auto;
+  margin-right: 4rem;
+  text-transform: uppercase;
+}
+header nav ul {
+  font-size: 0;
+}
+header nav li {
+  display: inline;
+  padding: 0 1.1em;
+  font-size: 1.1rem;
+}
+footer {
+  height: 100px;
+  border-top: solid 2px #32e0c4;
+  background-color: #393e46;
+  color: #eee;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+footer span {
+  padding: 5px 0;
+}
 
+/*********** MAIN CONTENT ************/
+.showcase {
+  background: url("../img/banner-post.jpg") no-repeat center/cover;
+  color: #eee;
+  height: 600px;
+}
+.showcase h1 {
+  font-size: 4em;
+  padding: 0.2em;
+  margin-bottom: 20px;
+}
+.showcase p {
+  text-align: center;
+  width: 60%;
+  padding: 10px;
+}
+.showcase .button-down {
+  margin-top: 1em;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.benefits {
+  color: #222831;
+}
+.benefits h2 {
+  max-width: 300px;
+  margin: 20px auto;
+  border-bottom: solid 1px #222831;
+  text-align: center;
+  font-size: 2em;
+  padding: 20px 5px;
+}
+.benefits .container {
+  margin: auto;
+  width: 85%;
+}
+.benefits .card {
+  display: table-cell;
+  text-align: center;
+  padding: 3em 2.5em;
+}
+.benefits .card i {
+  font-size: 80px;
+  margin-bottom: 0.3em;
+}
 
 /* Animate.css fading entrance snippets */
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
@@ -51,7 +167,6 @@
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
@@ -60,13 +175,13 @@
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
+
 @-webkit-keyframes fadeInDown {
   from {
     opacity: 0;
     -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
   }
-
   to {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
@@ -79,7 +194,6 @@
     -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
   }
-
   to {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
@@ -90,3 +204,5 @@
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
 }
+
+/*# sourceMappingURL=style.css.map */
