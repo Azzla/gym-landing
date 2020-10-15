@@ -13,6 +13,10 @@ $color-dark: #222831;
 	padding: 0;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: $font-stack;
 	background-color: $color-bg;
@@ -37,9 +41,9 @@ a {
 }
 
 .button-down{
-	display: inline-block;
+	display: block;
 	font-size: 3em;
-	transition: all .3s;
+	transition: all .2s;
 	
 	&:hover { color: $color-main; transform: scale(1.2); cursor: pointer; }
 	&:active { transform: scale(.8) }
@@ -65,11 +69,12 @@ a {
 	display: inline-block;
 	transition: all .3s;
 	padding: 6px;
+	outline: 1px solid transparent;
 	
 	&:hover {
 		color: $color-dark;
 		background-color: $color-bg;
-		transform: scale(1.1);
+		transform: scale(1.12);
 	}
 	
 	&:active {
@@ -84,7 +89,11 @@ header
 	align-items: center;
 	color: $color-bg;
 	background-color: $color-dark;
-	height: 90px;
+	height: 80px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	border-bottom: 1px solid $color-main;
 	
 	h1 {
 		font-size: 3em;
@@ -97,7 +106,7 @@ header
 		text-transform: uppercase;
 		
 		ul { font-size: 0; }
-		li {display: inline; padding: 0 1.1em; font-size: 1.1rem;}
+		li {display: inline; padding: 0 1.1em; font-size: 1.1rem; }
 	}
 	
 	a { @extend %link; }
@@ -106,7 +115,7 @@ header
 footer {
 	@extend %center-column;
 	height: 100px;
-	border-top: solid 2px $color-main;
+	border-top: solid 2px $color-bg;
 	background-color: $color-grey;
 	color: $color-bg;
 	text-transform: uppercase;
@@ -116,12 +125,12 @@ footer {
 }
 
 /*********** MAIN CONTENT ************/
-.showcase
+#showcase
 {
 	@extend %center-column;
 	background: url('../img/banner-post.jpg') no-repeat center/cover;
 	color: $color-bg;
-	height: 600px;
+	height: 100vh;
 	
 	h1 {
 		font-size: 4em;
@@ -136,17 +145,21 @@ footer {
 	}
 	
 	.button-down {
-		margin-top: 1em;
+		margin-top: 2em;
 	}
 } // -- end of showcase
 
-.benefits
+#benefits
 {
 	color: $color-dark;
+	height: 100vh;
+	padding-top: 250px;
 	
 	h2 {
 		max-width: 300px;
-		margin: 20px auto;
+		margin-bottom: 40px;
+		margin-left: auto;
+		margin-right: auto;
 		border-bottom: solid 1px $color-dark;
 		text-align: center;
 		font-size: 2em;
@@ -163,8 +176,62 @@ footer {
 		display: table-cell;
 		text-align: center;
 		padding: 3em 2.5em;
+		width: 33%;
 		
 		i { font-size: 80px; margin-bottom: .3em;}
+	}
+	
+	.column {
+		@extend %center-column;
+		width: 100%;
+		
+		.button-down { margin-top: 2em; }
+	}
+}
+
+#about
+{
+	@extend %center-column;
+	height: 100vh;
+	color: $color-bg;
+	background-color: $color-dark;
+	
+	h2 {
+		font-size: 2em;
+		padding: 20px 5px;
+		border-bottom: solid 1px $color-bg;
+		margin-bottom: 70px;
+	}
+	h3 { font-size: 1.5em; margin-bottom: 25px;}
+	
+	.summary {
+		@extend %center-column;
+		width: 100%;
+		background-color: $color-grey;
+		padding: 60px 0;
+		margin-bottom: 70px;
+		
+		p {
+			width: 50%;
+			font-size: 1.2em;
+			text-align: center;
+		}
+	}
+	
+	.contact {
+		width: 70%;
+		display: flex;
+		flex-direction: row;
+		
+		.card
+		{
+			text-align: center;
+			line-height: 1.8em;
+			width: 34%;
+			
+			.big { font-size: 30px; margin-bottom: .5em;}
+			
+		}
 	}
 }
 
@@ -177,58 +244,56 @@ footer {
 
 
 
-
-
 /* Animate.css fading entrance snippets */
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-.animate__fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-}
-@-webkit-keyframes fadeInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-.animate__fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-}
+// @-webkit-keyframes fadeIn {
+//   from {
+//     opacity: 0;
+//   }
+//
+//   to {
+//     opacity: 1;
+//   }
+// }
+// @keyframes fadeIn {
+//   from {
+//     opacity: 0;
+//   }
+//
+//   to {
+//     opacity: 1;
+//   }
+// }
+// .animate__fadeIn {
+//   -webkit-animation-name: fadeIn;
+//   animation-name: fadeIn;
+// }
+// @-webkit-keyframes fadeInDown {
+//   from {
+//     opacity: 0;
+//     -webkit-transform: translate3d(0, -100%, 0);
+//     transform: translate3d(0, -100%, 0);
+//   }
+//
+//   to {
+//     opacity: 1;
+//     -webkit-transform: translate3d(0, 0, 0);
+//     transform: translate3d(0, 0, 0);
+//   }
+// }
+// @keyframes fadeInDown {
+//   from {
+//     opacity: 0;
+//     -webkit-transform: translate3d(0, -100%, 0);
+//     transform: translate3d(0, -100%, 0);
+//   }
+//
+//   to {
+//     opacity: 1;
+//     -webkit-transform: translate3d(0, 0, 0);
+//     transform: translate3d(0, 0, 0);
+//   }
+// }
+// .animate__fadeInDown {
+//   -webkit-animation-name: fadeInDown;
+//   animation-name: fadeInDown;
+// }
