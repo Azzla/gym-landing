@@ -1,0 +1,234 @@
+/*********** GLOBAL SETTINGS ************/
+@import url('https://fonts.googleapis.com/css?family=Roboto|Poppins:200,600');
+
+$font-stack: Roboto, Poppins, sans-serif;
+$color-bg: #eee;
+$color-main: #32e0c4;
+$color-grey: #393e46;
+$color-dark: #222831;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: $font-stack;
+	background-color: $color-bg;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	font-family: Poppins;
+	font-weight: 300;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/*********** CLASSES ************/
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.button-down{
+	display: inline-block;
+	font-size: 3em;
+	transition: all .3s;
+	
+	&:hover { color: $color-main; transform: scale(1.2); cursor: pointer; }
+	&:active { transform: scale(.8) }
+}
+
+.fa {
+	color: inherit;
+}
+
+.emphasize {
+	color: $color-main;
+	font-weight: 600;
+}
+
+%center-column {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+%link {
+	display: inline-block;
+	transition: all .3s;
+	padding: 6px;
+	
+	&:hover {
+		color: $color-dark;
+		background-color: $color-bg;
+		transform: scale(1.1);
+	}
+	
+	&:active {
+		background-color: $color-main;
+	}
+}
+/*********** BLOCK - ELEMENT STYLES ************/
+
+header
+{
+	display: flex;
+	align-items: center;
+	color: $color-bg;
+	background-color: $color-dark;
+	height: 90px;
+	
+	h1 {
+		font-size: 3em;
+		margin-left: 4rem;
+	}
+	
+	nav {
+		margin-left: auto;
+		margin-right: 4rem;
+		text-transform: uppercase;
+		
+		ul { font-size: 0; }
+		li {display: inline; padding: 0 1.1em; font-size: 1.1rem;}
+	}
+	
+	a { @extend %link; }
+} // -- end of header
+
+footer {
+	@extend %center-column;
+	height: 100px;
+	border-top: solid 2px $color-main;
+	background-color: $color-grey;
+	color: $color-bg;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	
+	span { padding: 5px 0; }
+}
+
+/*********** MAIN CONTENT ************/
+.showcase
+{
+	@extend %center-column;
+	background: url('../img/banner-post.jpg') no-repeat center/cover;
+	color: $color-bg;
+	height: 600px;
+	
+	h1 {
+		font-size: 4em;
+		padding: .2em;
+		margin-bottom: 20px;
+	}
+	
+	p {
+		text-align: center;
+		width: 60%;
+		padding: 10px;
+	}
+	
+	.button-down {
+		margin-top: 1em;
+	}
+} // -- end of showcase
+
+.benefits
+{
+	color: $color-dark;
+	
+	h2 {
+		max-width: 300px;
+		margin: 20px auto;
+		border-bottom: solid 1px $color-dark;
+		text-align: center;
+		font-size: 2em;
+		padding: 20px 5px;
+	}
+	
+	.container
+	{
+		margin: auto;
+		width: 85%;
+	}
+	
+	.card {
+		display: table-cell;
+		text-align: center;
+		padding: 3em 2.5em;
+		
+		i { font-size: 80px; margin-bottom: .3em;}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Animate.css fading entrance snippets */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+.animate__fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
