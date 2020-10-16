@@ -58,6 +58,12 @@ a {
 	font-weight: 600;
 }
 
+.current {
+	color: $color-dark;
+	background-color: $color-bg;
+	transform: scale(1.12);
+}
+
 %center-column {
 	display: flex;
 	justify-content: center;

@@ -55,6 +55,12 @@ a {
   font-weight: 600;
 }
 
+.current {
+  color: #222831;
+  background-color: #eee;
+  transform: scale(1.12);
+}
+
 #memberships, #locations .card, #locations, #about .summary, #about, #benefits .column, #showcase, footer {
   display: flex;
   justify-content: center;
