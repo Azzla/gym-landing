@@ -239,42 +239,110 @@ footer {
 #locations
 {
 	@extend %center-column;
-	height: 1000px;
+	height: 1100px;
 	color: $color-dark;
 	padding: 200px 0;
 	
 	h1 {
 		font-size: 2.5em;
-		margin-top: 100px;
-		margin-bottom: 50px;
+		margin-bottom: 20px;
 		padding: 10px 5px;
 		border-bottom: 1px solid $color-dark;
 	}
 	p {
-		margin-bottom: 100px;
 		margin-top: 50px;
+		width: 60%;
+		text-align: center;
 	}
 	
 	.loc-container {
+		margin-top: 50px;
 		width: 80%;
+		height: 500px;
 		display: flex;
 		justify-content: space-between;
 	}
 	
 	.card {
-		flex-grow: 1;
+		@extend %center-column;
+		width: 33%;
 		
 		h2 {
+			width: 70%;
 			text-align: center;
 			border-bottom: 1px solid $color-dark;
 			padding: 5px 0;
 			margin-bottom: 15px;
 		}
 		
-		img { width: 400px; height: 290px; }
+		.gym-image {
+			height: 70%;
+			width: 90%;
+			background-position: center;
+			background-size: cover;
+			
+			outline: 1px solid transparent;
+			transition: all .5s;
+			&:hover {
+				transform: scale(1.05);
+				filter: blur(2px);
+			}
+		}
+		
+		.gym1 { background-image: url('../img/gym1.jpg'); }
+		.gym2 { background-image: url('../img/gym2.jpg'); }
+		.gym3 { background-image: url('../img/gym3.jpg'); }
 	}
 }
 
+#memberships
+{
+	@extend %center-column;
+	height: 100vh;
+	padding-top: 200px;
+	background-color: $color-dark;
+	color: $color-bg;
+	
+	ul { list-style: none; padding-top: 10px; }
+	
+	h1 {
+		font-size: 3em;
+		border-bottom: solid 1px $color-bg;
+		margin-bottom: 150px;
+	}
+	
+	h2 {
+		font-size: 2em;
+		text-align: center;
+	}
+	
+	.mem-container
+	{
+		width: 80%;
+		display: flex;
+		margin-bottom: 300px;
+	}
+	
+	.card
+	{
+		background-color: $color-grey;
+		width: 33%;
+		margin: 0 30px;
+		border-bottom: 2px solid $color-main;
+		
+		li {
+			padding: 10px 0;
+			padding-left: 20px;
+			border-top: 2px solid $color-main;
+		}
+		.price, .sign-up { text-align: center; font-size: 1.5em; padding-left: 0; }
+		.sign-up { color: $color-dark; background-color: $color-main; }
+		
+		outline: 1px solid transparent; // -- transition rendering bug fix
+		transition: all .5s;
+		&:hover { transform: scale(1.1); }
+	}
+}
 
 
 

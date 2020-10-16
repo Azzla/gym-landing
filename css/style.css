@@ -55,7 +55,7 @@ a {
   font-weight: 600;
 }
 
-#locations, #about .summary, #about, #benefits .column, #showcase, footer {
+#memberships, #locations .card, #locations, #about .summary, #about, #benefits .column, #showcase, footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -217,38 +217,108 @@ footer span {
 }
 
 #locations {
-  height: 1000px;
+  height: 1100px;
   color: #222831;
   padding: 200px 0;
 }
 #locations h1 {
   font-size: 2.5em;
-  margin-top: 100px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   padding: 10px 5px;
   border-bottom: 1px solid #222831;
 }
 #locations p {
-  margin-bottom: 100px;
   margin-top: 50px;
+  width: 60%;
+  text-align: center;
 }
 #locations .loc-container {
+  margin-top: 50px;
   width: 80%;
+  height: 500px;
   display: flex;
   justify-content: space-between;
 }
 #locations .card {
-  flex-grow: 1;
+  width: 33%;
 }
 #locations .card h2 {
+  width: 70%;
   text-align: center;
   border-bottom: 1px solid #222831;
   padding: 5px 0;
   margin-bottom: 15px;
 }
-#locations .card img {
-  width: 400px;
-  height: 290px;
+#locations .card .gym-image {
+  height: 70%;
+  width: 90%;
+  background-position: center;
+  background-size: cover;
+  outline: 1px solid transparent;
+  transition: all 0.5s;
+}
+#locations .card .gym-image:hover {
+  transform: scale(1.05);
+  filter: blur(2px);
+}
+#locations .card .gym1 {
+  background-image: url("../img/gym1.jpg");
+}
+#locations .card .gym2 {
+  background-image: url("../img/gym2.jpg");
+}
+#locations .card .gym3 {
+  background-image: url("../img/gym3.jpg");
+}
+
+#memberships {
+  height: 100vh;
+  padding-top: 200px;
+  background-color: #222831;
+  color: #eee;
+}
+#memberships ul {
+  list-style: none;
+  padding-top: 10px;
+}
+#memberships h1 {
+  font-size: 3em;
+  border-bottom: solid 1px #eee;
+  margin-bottom: 150px;
+}
+#memberships h2 {
+  font-size: 2em;
+  text-align: center;
+}
+#memberships .mem-container {
+  width: 80%;
+  display: flex;
+  margin-bottom: 300px;
+}
+#memberships .card {
+  background-color: #393e46;
+  width: 33%;
+  margin: 0 30px;
+  border-bottom: 2px solid #32e0c4;
+  outline: 1px solid transparent;
+  transition: all 0.5s;
+}
+#memberships .card li {
+  padding: 10px 0;
+  padding-left: 20px;
+  border-top: 2px solid #32e0c4;
+}
+#memberships .card .price, #memberships .card .sign-up {
+  text-align: center;
+  font-size: 1.5em;
+  padding-left: 0;
+}
+#memberships .card .sign-up {
+  color: #222831;
+  background-color: #32e0c4;
+}
+#memberships .card:hover {
+  transform: scale(1.1);
 }
 
 /* Animate.css fading entrance snippets */
