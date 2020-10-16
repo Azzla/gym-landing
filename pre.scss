@@ -81,8 +81,8 @@ a {
 		background-color: $color-main;
 	}
 }
-/*********** BLOCK - ELEMENT STYLES ************/
 
+/*********** BLOCK - ELEMENT STYLES ************/
 header
 {
 	display: flex;
@@ -153,7 +153,7 @@ footer {
 {
 	color: $color-dark;
 	height: 100vh;
-	padding-top: 250px;
+	padding-top: 220px;
 	
 	h2 {
 		max-width: 300px;
@@ -169,6 +169,7 @@ footer {
 	.container
 	{
 		margin: auto;
+		padding-top: 50px;
 		width: 85%;
 	}
 	
@@ -185,7 +186,7 @@ footer {
 		@extend %center-column;
 		width: 100%;
 		
-		.button-down { margin-top: 2em; }
+		.button-down { margin-top: 1.5em; }
 	}
 }
 
@@ -218,24 +219,61 @@ footer {
 		}
 	}
 	
-	.contact {
+	.contact-container {
 		width: 70%;
 		display: flex;
 		flex-direction: row;
+	}
+	
+	.card
+	{
+		text-align: center;
+		line-height: 1.8em;
+		width: 34%;
 		
-		.card
-		{
-			text-align: center;
-			line-height: 1.8em;
-			width: 34%;
-			
-			.big { font-size: 30px; margin-bottom: .5em;}
-			
-		}
+		.big { font-size: 30px; margin-bottom: .5em;}
+		
 	}
 }
 
-
+#locations
+{
+	@extend %center-column;
+	height: 1000px;
+	color: $color-dark;
+	padding: 200px 0;
+	
+	h1 {
+		font-size: 2.5em;
+		margin-top: 100px;
+		margin-bottom: 50px;
+		padding: 10px 5px;
+		border-bottom: 1px solid $color-dark;
+	}
+	p {
+		margin-bottom: 100px;
+		margin-top: 50px;
+	}
+	
+	.loc-container {
+		width: 80%;
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.card {
+		flex-grow: 1;
+		
+		h2 {
+			text-align: center;
+			border-bottom: 1px solid $color-dark;
+			padding: 5px 0;
+			margin-bottom: 15px;
+		}
+		
+		img { width: 400px; height: 290px; }
+	}
+}
 
 
 
