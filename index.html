@@ -6,12 +6,13 @@
 		<meta name="author" content="Carson Bartholomew">
 		<meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css">
 		<link rel="stylesheet" href="./css/style.css">
 		<title>Azzla Fitness</title>
 	</head>
 	<body>
 		<header>
-			<h1><span class='emphasize'>Azzla</span> Fitness</h1>
+			<a href="./index.html"><h1><span class='emphasize'>Azzla</span> Fitness</h1></a>
 			<nav>
 				<ul>
 					<li><a class='current' href="./index.html">Home</a></li>
@@ -25,31 +26,33 @@
 		
 		<main>
 			<section id='showcase'>
-				<h1>Better <span class='emphasize'>fitness</span>, better <span class='emphasize'>you</span>.</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-					exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				</p>
-				<span class='button-down'><a href="#benefits">&bigtriangledown;</a></span>
+				<div class='wow fadeIn' data-wow-duration='2s'>
+					<h1>Better <span class='emphasize'>fitness</span>, better <span class='emphasize'>you</span>.</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+						incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					</p>
+					<span class='button-down'><a href="#benefits">&bigtriangledown;</a></span>
+				</div>
 			</section>
 			<!-- End of Showcase -->
 			
 			<section id='benefits'>
 				<h2>Why Choose Us?</h2>
 				<div class='container'>
-					<div class='card'>
+					<div class='card wow fadeInDown'>
 						<i class='fa fa-group'></i>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
 							incididunt ut labore et dolore magna aliqua.
 						</p>
 					</div>
-					<div class='card'>
+					<div class='card wow fadeInDown' data-wow-delay='1s'>
 						<i class='fa fa-heartbeat'></i>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
 							incididunt ut labore et dolore magna aliqua.
 						</p>
 					</div>
-					<div class='card'>
+					<div class='card wow fadeInDown' data-wow-delay='2s'>
 						<i class='fa fa-money'></i>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
 							incididunt ut labore et dolore magna aliqua.
@@ -64,8 +67,8 @@
 			
 			<section id='about'>
 				<h2>About <span class='emphasize'>Azzla</span> Fitness</h2>
-				<div class='summary'>
-					<p>
+				<div class='summary wow fadeInLeft'>
+					<p class='wow fadeIn' data-wow-delay='1s'>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
 						labore et dolore magna aliqua. <br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
 						nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
