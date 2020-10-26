@@ -61,7 +61,7 @@ a {
   transform: scale(1.12);
 }
 
-#memberships, #locations .card, #locations, #about .summary, #about, #benefits .column, #showcase, footer {
+#sign-up form, #sign-up, #help, #memberships, #locations .card, #locations, #about .summary, #about, #benefits .column, #showcase, footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,6 +129,7 @@ footer span {
   background: url("../img/banner-post.jpg") no-repeat center/cover;
   color: #eee;
   height: 100vh;
+  min-height: 800px;
 }
 #showcase h1 {
   font-size: 4em;
@@ -147,7 +148,8 @@ footer span {
 #benefits {
   color: #222831;
   height: 100vh;
-  padding-top: 220px;
+  min-height: 800px;
+  padding-top: 10%;
 }
 #benefits h2 {
   max-width: 300px;
@@ -183,6 +185,7 @@ footer span {
 
 #about {
   height: 100vh;
+  min-height: 800px;
   color: #eee;
   background-color: #222831;
 }
@@ -251,7 +254,6 @@ footer span {
 #locations .card h2 {
   width: 70%;
   text-align: center;
-  border-bottom: 1px solid #222831;
   padding: 5px 0;
   margin-bottom: 15px;
 }
@@ -260,12 +262,6 @@ footer span {
   width: 90%;
   background-position: center;
   background-size: cover;
-  outline: 1px solid transparent;
-  transition: all 0.5s;
-}
-#locations .card .gym-image:hover {
-  transform: scale(1.05);
-  filter: blur(2px);
 }
 #locations .card .gym1 {
   background-image: url("../img/gym1.jpg");
@@ -278,8 +274,7 @@ footer span {
 }
 
 #memberships {
-  height: 100vh;
-  padding-top: 200px;
+  height: 1000px;
   background-color: #222831;
   color: #eee;
 }
@@ -288,6 +283,7 @@ footer span {
   padding-top: 10px;
 }
 #memberships h1 {
+  margin-top: 200px;
   font-size: 3em;
   border-bottom: solid 1px #eee;
   margin-bottom: 150px;
@@ -305,26 +301,105 @@ footer span {
   background-color: #393e46;
   width: 33%;
   margin: 0 30px;
-  border-bottom: 2px solid #32e0c4;
-  outline: 1px solid transparent;
-  transition: all 0.5s;
+  border-bottom: 1px solid #32e0c4;
 }
 #memberships .card li {
-  padding: 10px 0;
-  padding-left: 20px;
-  border-top: 2px solid #32e0c4;
+  padding: 15px 20px;
+  border-top: 1px solid #32e0c4;
 }
 #memberships .card .price, #memberships .card .sign-up {
   text-align: center;
   font-size: 1.5em;
   padding-left: 0;
+  padding-right: 0;
 }
 #memberships .card .sign-up {
   color: #222831;
   background-color: #32e0c4;
+  transition: all 0.3s;
+  outline: 1px solid transparent;
+  border-top: 1px solid #32e0c4;
+  border-right: 1px solid #32e0c4;
+  border-left: 1px solid #32e0c4;
 }
-#memberships .card:hover {
-  transform: scale(1.1);
+#memberships .card .sign-up:hover {
+  background-color: #222831;
+  color: #32e0c4;
+  cursor: pointer;
+}
+
+#help {
+  height: 1400px;
+  padding-top: 100px;
+  color: #222831;
+}
+#help h1 {
+  font-size: 4em;
+  border-bottom: solid 1px #222831;
+  margin-bottom: 100px;
+}
+#help .question-con {
+  text-align: left;
+  width: 100%;
+}
+#help .question-con .q {
+  margin-left: 50px;
+  margin-bottom: 100px;
+}
+#help .question-con h2 {
+  display: inline-block;
+  font-size: 1.8em;
+  border-bottom: solid 1px #222831;
+}
+#help .question-con p {
+  color: #393e46;
+  width: 80%;
+  margin-top: 30px;
+}
+
+#sign-up {
+  height: 100vh;
+  color: #222831;
+}
+#sign-up h1 {
+  font-size: 3em;
+  margin-bottom: 150px;
+  border-bottom: solid 1px #222831;
+}
+#sign-up h2 {
+  font-size: 2em;
+  border-bottom: solid 1px #222831;
+  margin-bottom: 20px;
+  text-align: center;
+}
+#sign-up form {
+  width: 70%;
+}
+#sign-up input {
+  outline: none;
+}
+#sign-up fieldset {
+  border: none;
+  margin-bottom: 150px;
+  width: 100%;
+  text-align: center;
+}
+#sign-up button {
+  font-family: Roboto;
+  font-size: 1.2em;
+  background-color: #222831;
+  color: #32e0c4;
+  border: none;
+  padding: 15px 32px;
+  text-decoration: none;
+}
+#sign-up button:hover {
+  transition: all 0.3s;
+  cursor: pointer;
+  color: #eee;
+}
+#sign-up label {
+  margin-right: 15px;
 }
 
 /* Animate.css fading entrance snippets */
