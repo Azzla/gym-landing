@@ -61,25 +61,25 @@ a {
   transform: scale(1.12);
 }
 
-#sign-up form, #sign-up, #help, #memberships, #locations .card, #locations, #about .summary, #about, #benefits .column, #showcase, footer {
+#sign-up form, #sign-up, #help, #memberships, #locations .card, #locations, #about .summary, #about, #benefits .column, #showcase div, #showcase, footer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-header a {
+header nav a {
   display: inline-block;
   transition: all 0.3s;
   padding: 6px;
   outline: 1px solid transparent;
 }
-header a:hover {
+header nav a:hover {
   color: #222831;
   background-color: #eee;
   transform: scale(1.12);
 }
-header a:active {
+header nav a:active {
   background-color: #32e0c4;
 }
 
@@ -130,6 +130,9 @@ footer span {
   color: #eee;
   height: 100vh;
   min-height: 800px;
+}
+#showcase div {
+  width: 100%;
 }
 #showcase h1 {
   font-size: 4em;
@@ -343,7 +346,7 @@ footer span {
   width: 100%;
 }
 #help .question-con .q {
-  margin-left: 50px;
+  margin-left: 150px;
   margin-bottom: 100px;
 }
 #help .question-con h2 {
@@ -381,11 +384,18 @@ footer span {
 #sign-up select {
   margin-right: 20px;
 }
+#sign-up span {
+  font-size: 0.8em;
+  color: #393e46;
+}
 #sign-up fieldset {
   border: none;
   margin-bottom: 150px;
   width: 100%;
   text-align: center;
+}
+#sign-up #account label {
+  margin-left: 25px;
 }
 #sign-up button {
   font-family: Roboto;
@@ -405,7 +415,5 @@ footer span {
 #sign-up label {
   margin-right: 15px;
 }
-
-/* Animate.css fading entrance snippets */
 
 /*# sourceMappingURL=style.css.map */

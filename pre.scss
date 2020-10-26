@@ -113,9 +113,8 @@ header
 		
 		ul { font-size: 0; }
 		li {display: inline; padding: 0 1.1em; font-size: 1.1rem; }
+		a { @extend %link; }
 	}
-	
-	a { @extend %link; }
 } // -- end of header
 
 footer {
@@ -138,6 +137,11 @@ footer {
 	color: $color-bg;
 	height: 100vh;
 	min-height: 800px;
+	
+	div {
+		@extend %center-column;
+		width: 100%;
+	}
 	
 	h1 {
 		font-size: 4em;
@@ -368,7 +372,7 @@ footer {
 		text-align: left;
 		width: 100%;
 		
-		.q { margin-left: 50px; margin-bottom: 100px; }
+		.q { margin-left: 150px; margin-bottom: 100px; }
 		h2 {
 			display: inline-block;
 			font-size: 1.8em;
@@ -394,6 +398,7 @@ footer {
 	form { @extend %center-column; width: 70%; }
 	input { outline: none; }
 	select { margin-right: 20px; }
+	span { font-size: .8em; color: $color-grey; }
 	
 	fieldset
 	{
@@ -402,6 +407,8 @@ footer {
 		width: 100%;
 		text-align: center;
 	}
+	
+	#account { label { margin-left: 25px; } }
 	
 	button {
 		font-family: Roboto;
@@ -424,68 +431,3 @@ footer {
 		margin-right: 15px;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-/* Animate.css fading entrance snippets */
-// @-webkit-keyframes fadeIn {
-//   from {
-//     opacity: 0;
-//   }
-//
-//   to {
-//     opacity: 1;
-//   }
-// }
-// @keyframes fadeIn {
-//   from {
-//     opacity: 0;
-//   }
-//
-//   to {
-//     opacity: 1;
-//   }
-// }
-// .animate__fadeIn {
-//   -webkit-animation-name: fadeIn;
-//   animation-name: fadeIn;
-// }
-// @-webkit-keyframes fadeInDown {
-//   from {
-//     opacity: 0;
-//     -webkit-transform: translate3d(0, -100%, 0);
-//     transform: translate3d(0, -100%, 0);
-//   }
-//
-//   to {
-//     opacity: 1;
-//     -webkit-transform: translate3d(0, 0, 0);
-//     transform: translate3d(0, 0, 0);
-//   }
-// }
-// @keyframes fadeInDown {
-//   from {
-//     opacity: 0;
-//     -webkit-transform: translate3d(0, -100%, 0);
-//     transform: translate3d(0, -100%, 0);
-//   }
-//
-//   to {
-//     opacity: 1;
-//     -webkit-transform: translate3d(0, 0, 0);
-//     transform: translate3d(0, 0, 0);
-//   }
-// }
-// .animate__fadeInDown {
-//   -webkit-animation-name: fadeInDown;
-//   animation-name: fadeInDown;
-// }
