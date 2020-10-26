@@ -381,7 +381,7 @@ footer {
 #sign-up
 {
 	@extend %center-column;
-	height: 100vh;
+	height: 1000px;
 	color: $color-dark;
 	
 	h1 { font-size: 3em; margin-bottom: 150px; border-bottom: solid 1px $color-dark; }
@@ -393,6 +393,7 @@ footer {
 	}
 	form { @extend %center-column; width: 70%; }
 	input { outline: none; }
+	select { margin-right: 20px; }
 	
 	fieldset
 	{
@@ -409,6 +410,7 @@ footer {
 		color: $color-main;
 		border: none;
 		padding: 15px 32px;
+		margin-top: -100px;
 		text-decoration: none;
 		
 		&:hover {
