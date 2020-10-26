@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Azzla Fitness; Better fitness, better you.">
+		<meta name="author" content="Carson Bartholomew">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="./css/style.css">
+		<title>Azzla Fitness</title>
+	</head>
+	<body>
+		<header>
+			<h1><span class='emphasize'>Azzla</span> Fitness</h1>
+			<nav>
+				<ul>
+					<li><a href="./index.html">Home</a></li>
+					<li><a href="./locations.html">Locations</a></li>
+					<li><a href="./memberships.html">Memberships</a></li>
+					<li><a href="./help.html">Help</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- End of Header -->
+		
+		<main>
+			<section id='sign-up'>
+				<h1>Sign Up</h1>
+				<form>
+		      <fieldset>
+		        <h2>Account Info</h2>
+		        <label for="name">Name:</label>
+		        <input type="text" name="user_name" id="name">
+		        <label for="email">Email:</label>
+		        <input type="email" name="user_email" id="email">
+		        <label for="password">Password:</label>
+		        <input type="password" name="user_password" id="password">
+		      </fieldset>
+		      <fieldset>
+		        <h2>Create Profile</h2>
+		        <label>Program:</label>
+		        <select id="program" name="user_program">
+	            <optgroup label="Exercise Programs">
+	              <option value="bodybuilding">Bodybuilding</option>
+	              <option value="crossfit">CrossFit</option>
+	              <option value="yoga">Yoga</option>
+	              <option value="cycling">Cycling</option>
+	            </optgroup>
+	            <optgroup label="Spa">
+	              <option value="Meditation">Meditation</option>
+	              <option value="tanning">Tanning</option>
+	              <option value="massage">Massage</option>
+	              <option value"salt-bath">Salt Bath</option>
+	            </optgroup>
+		        </select>
+		        <label class="block-label">Gender:</label>
+		        <input type="radio" name="user_gender" value="male" id="male"><label for="male">Male</label>
+		        <input type="radio" name="user_gender" value="female" id="female"><label for="female">Female</label>
+		        <label class="block-label">Access:</label>
+		        <input type="checkbox" value="trainers" name="user_access" id="trainers"><label for="trainers">Trainers</label>
+		        <input type="checkbox" value="spa" name="user_access" id="spa"><label for="spa">Spa</label>
+					</fieldset>
+		      <button>Submit</button>
+		    </form>
+
+			</section>
+			<!-- End of Memberships -->
+			
+		</main>
+		<!-- End of Main -->
+		
+		<footer>
+			<span>Copyright &copy; Azzla Fitness 2020</span>
+			<span>All Rights Reserved.</span>
+		</footer>
+	</body>
+	<!-- End of Content -->
+	<script src='js/wow.min.js'></script>
+	<script>
+		new WOW().init();
+	</script>
+</html>
