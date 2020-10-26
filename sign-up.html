@@ -11,7 +11,7 @@
 	</head>
 	<body>
 		<header>
-			<h1><span class='emphasize'>Azzla</span> Fitness</h1>
+			<a href="./index.html"><h1><span class='emphasize'>Azzla</span> Fitness</h1></a>
 			<nav>
 				<ul>
 					<li><a href="./index.html">Home</a></li>
@@ -27,7 +27,7 @@
 			<section id='sign-up'>
 				<h1>Sign Up</h1>
 				<form>
-		      <fieldset>
+		      <fieldset id='account'>
 		        <h2>Account Info</h2>
 		        <label for="name">Name:</label>
 		        <input type="text" id="name">
@@ -36,10 +36,10 @@
 		        <label for="password">Password:</label>
 		        <input type="password" id="password">
 		      </fieldset>
-		      <fieldset>
+		      <fieldset id='profile'>
 		        <h2>Create Profile</h2>
 		        <label>Program:</label>
-		        <select id="program" name="user_program">
+		        <select id="program">
 	            <optgroup label="Exercise Programs">
 	              <option value="bodybuilding">Bodybuilding</option>
 	              <option value="crossfit">CrossFit</option>
@@ -54,12 +54,13 @@
 	            </optgroup>
 		        </select>
 		        <label>Gender:</label>
-		        <input type="radio" name="user_gender" value="male" id="male"><label for="male">Male</label>
-		        <input type="radio" name="user_gender" value="female" id="female"><label for="female">Female</label>
+		        <input type="radio" value="male" id="male"><label for="male">Male</label>
+		        <input type="radio" value="female" id="female"><label for="female">Female</label>
 						<label>Age:</label>
 		        <input type='number' id='age'>
 					</fieldset>
 		      <button>Submit</button>
+				<br><span>This button does not implement functionality for this template.</span>
 		    </form>
 
 			</section>
